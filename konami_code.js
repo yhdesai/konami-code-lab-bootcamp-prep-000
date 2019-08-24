@@ -27,21 +27,21 @@ function init() {
           trueOrFalse.push("false");
           i++;
         }
-        
-          
+
+
         if(check.length===codes.length){
           i=0;
             if(trueOrFalse.includes("false")){
                   check.length=0;
                   trueOrFalse.length=0;
-            
-           
+
+
             }else{
           check.length =0;
                  trueOrFalse.length=0;
             }
               }
     });
-    
-   
+
+
 }
