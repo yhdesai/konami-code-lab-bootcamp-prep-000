@@ -1,4 +1,4 @@
-const codes = [
+onst codes = [
   "ArrowUp",
   "ArrowUp",
   "ArrowDown",
@@ -10,29 +10,38 @@ const codes = [
   "b",
   "a"
 ];
+var check=[];
+var trueOrFalse=[];
+
+
+var i=0;
 
 function init() {
-  // your code here
-  // Keys for A, B, and C keys.
-const alphabet = ['a', 'b', 'c'];
 
-// Keep track of index outside of the event handler.
-let index = 0;
-
-// This is the function that would be invoked by the event listener.
-function onKeyDownHandler(e) {
-  const key = e.key;
-
-  if (key === alphabet[index]) {
-    index++;
-
-    if (index === alphabet.length) {
-      alert("Hurray!");
-
-      index = 0;
-    }
-  } else {
-    index = 0;
-  }
-}
+  document.querySelector("body").addEventListener("keydown",function(e){
+            check.push(e.key);
+        if(e.key===codes[i]){
+          trueOrFalse.push("true");
+          i++;
+        }else{
+          trueOrFalse.push("false");
+          i++;
+        }
+        
+          
+        if(check.length===codes.length){
+          i=0;
+            if(trueOrFalse.includes("false")){
+                  check.length=0;
+                  trueOrFalse.length=0;
+            
+           
+            }else{
+          check.length =0;
+                 trueOrFalse.length=0;
+            }
+              }
+    });
+    
+   
 }
